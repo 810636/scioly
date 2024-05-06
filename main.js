@@ -43,13 +43,16 @@ function animate() {
     if(currentIndex!=null){
         context.fillText(guessList[currentIndex],canvas.width/2,canvas.height/2);
     }
-    if(timer>60*90){
-        context.fillText("Correct: "+cList, canvas.width/2, canvas.height/2+300);
-        context.fillText("Incorrect: "+iList,canvas.width/2,canvas.hieght/2+400);
-    }
     context.fillText("Score: "+score,canvas.width/2, canvas.height/2+100);
     context.fillText("Time: "+Math.round((90*60-timer)/60), canvas.width/2,canvas.height/2+200);
     context.closePath();
+    // if(timer>60*90){
+    //     context.beginPath;
+    //     context.font="30px serif";
+    //     context.fillText("Correct: "+cList, canvas.width/2, canvas.height/2+300);
+    //     context.fillText("Incorrect: "+iList,canvas.width/2,canvas.hieght/2+400);
+    //     context.closePath();
+    // }
     requestAnimationFrame(animate); // next cycle
 }
 function addAllListeners(){
