@@ -44,7 +44,7 @@ function animate() {
         context.fillText(guessList[currentIndex],canvas.width/2,canvas.height/2);
     }
     context.fillText("Score: "+score,canvas.width/2, canvas.height/2+100);
-    context.fillText("Time: "+Math.round((90*60-timer)/60), canvas.width/2,canvas.height/2+200);
+    //context.fillText("Time: "+Math.round((90*60-timer)/60), canvas.width/2,canvas.height/2+200);
     context.closePath();
     // if(timer>60*90){
     //     context.beginPath;
@@ -84,9 +84,9 @@ function playGame(){
             iList=[];
         }
     } else { 
-        if(timer>60*90){
-            timerOn=false;
-        }
+        // if(timer>60*90){
+        //     timerOn=false;
+        // }
         if(keys[" "].pressed&&delay>30){
             score++;
             cList.splice(0,0,guessList[currentIndex]);
